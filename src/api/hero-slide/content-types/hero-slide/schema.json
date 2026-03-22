@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hero_slides",
+  "info": {
+    "singularName": "hero-slide",
+    "pluralName": "hero-slides",
+    "displayName": "Hero Slide",
+    "description": "Slides for the homepage hero section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "imageLabel": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "stats": {
+      "type": "json"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "pages": {
+      "type": "json",
+      "default": ["all"],
+      "description": "Trang hiển thị slide này. Dùng [\"all\"] để hiện ở mọi trang. Hoặc chỉ định: [\"home\",\"services\",\"projects\",\"about\",\"journal\",\"careers\",\"contact\"]"
+    }
+  }
+}

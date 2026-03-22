@@ -1,0 +1,63 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepage",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": "Homepage content configuration"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brandSectionTitle": {
+      "type": "string"
+    },
+    "brandSectionLead": {
+      "type": "text"
+    },
+    "socialTitle": {
+      "type": "string"
+    },
+    "socialLead": {
+      "type": "text"
+    },
+    "socialStories": {
+      "type": "json",
+      "description": "JSON array: [{\"title\": \"...\", \"description\": \"...\"}]"
+    },
+    "careersTitle": {
+      "type": "string"
+    },
+    "careersLead": {
+      "type": "text"
+    },
+    "careersBlock": {
+      "type": "json",
+      "description": "JSON object: {\"title\": \"...\", \"description\": \"...\", \"highlights\": [\"...\"]}"
+    },
+    "newsTitle": {
+      "type": "string"
+    },
+    "newsLead": {
+      "type": "text"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaTitle": {
+      "type": "string"
+    },
+    "ctaDescription": {
+      "type": "text"
+    },
+    "ctaPrimary": {
+      "type": "string"
+    },
+    "ctaSecondary": {
+      "type": "string"
+    }
+  }
+}
