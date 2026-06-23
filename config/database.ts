@@ -4,6 +4,23 @@ import type { Core } from '@strapi/strapi';
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Database => {
   const client = env('DATABASE_CLIENT', 'sqlite');
 
+  // Render / Production: use DATABASE_URL connection string
+  if (env('DATABASE_URL')) {
+    return {
+      connection: {
+        client: 'postgres',
+        connection: {
+          connectionString: env('DATABASE_URL'),
+          ssl: env.bool('DATABASE_SSL', false)
+            ? { rejectUnauthorized: false }
+            : false,
+        },
+        acquireConnectionTimeout: env.int('DATABASE_CONNECTION_TIMEOUT', 60000),
+      },
+    };
+  }
+
+  // Local development: use individual connection fields
   const connections = {
     mysql: {
       connection: {

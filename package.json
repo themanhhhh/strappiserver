@@ -9,20 +9,24 @@
     "deploy": "strapi deploy",
     "dev": "strapi develop",
     "develop": "strapi develop",
+    "postinstall": "node scripts/patch-strapi-content-releases.js",
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
+    "@strapi/design-system": "^2.1.2",
+    "@strapi/icons": "^2.1.2",
     "@strapi/plugin-cloud": "5.37.1",
     "@strapi/plugin-users-permissions": "5.37.1",
     "@strapi/strapi": "5.37.1",
-    "better-sqlite3": "12.4.1",
-    "pg": "^8.19.0",
+    "mysql2": "^3.22.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "@strapi/provider-upload-cloudinary": "5.37.1",
+    "sharp": "^0.35.2",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
